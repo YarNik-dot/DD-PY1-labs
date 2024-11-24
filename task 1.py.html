@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6897bb;}
+.s2 { color: #808080;}
+.s3 { color: #cc7832;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">money_capital = </span><span class="s1">20000  </span><span class="s2"># Подушка безопасности</span>
+<span class="s0">salary = </span><span class="s1">5000  </span><span class="s2"># Ежемесячная зарплата</span>
+<span class="s0">spend = </span><span class="s1">6000  </span><span class="s2"># Траты за первый месяц</span>
+<span class="s0">increase = </span><span class="s1">0.05  </span><span class="s2"># Ежемесячный рост цен</span>
+
+<span class="s2"># TODO Посчитайте количество  месяцев, которое можно протянуть без долгов</span>
+<span class="s0">month = </span><span class="s1">0</span>
+<span class="s3">while True</span><span class="s0">:</span>
+    <span class="s0">budget = money_capital + salary</span>
+    <span class="s3">if </span><span class="s0">budget &gt;= spend:</span>
+        <span class="s0">month += </span><span class="s1">1</span>
+        <span class="s0">money_capital= budget - spend</span>
+        <span class="s0">spend *= (</span><span class="s1">1 </span><span class="s0">+ increase)</span>
+    <span class="s3">else</span><span class="s0">:</span>
+        <span class="s3">break</span>
+<span class="s0">print(</span><span class="s4">&quot;Количество месяцев, которое можно протянуть без долгов:&quot;</span><span class="s3">, </span><span class="s0">month)</span>
+</pre>
+</body>
+</html>
